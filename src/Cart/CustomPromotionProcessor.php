@@ -22,6 +22,10 @@ class CustomPromotionProcessor implements CartProcessorInterface
 
     public function process(CartDataCollection $data, Cart $original, Cart $toCalculate, SalesChannelContext $context, CartBehavior $behavior): void
     {
+        if ($toCalculate->getLineItems()->filterGoods()->count() === 0) {
+            return;
+        }
+
         $discountLineItem = $this->createDiscount('EXAMPLE_DISCOUNT');
 
         // declare price definition to define how this price is calculated
