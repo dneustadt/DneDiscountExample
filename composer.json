@@ -1,0 +1,53 @@
+{
+    "name": "dne/discount-example",
+    "description": "Discount example",
+    "version": "1.0.0",
+    "type": "shopware-platform-plugin",
+    "license": "MIT",
+    "require": {
+        "shopware/core": "~v6.4.0|~v6.5.0"
+    },
+    "authors": [
+        {
+            "name": "Open Source Plugins"
+        }
+    ],
+    "extra": {
+        "shopware-plugin-class": "Dne\\DiscountExample\\DneDiscountExample",
+        "copyright": "(c) David Neustadt",
+        "label": {
+            "de-DE": "Discount Example",
+            "en-GB": "Discount Example"
+        },
+        "description": {
+            "de-DE": "Discount Example",
+            "en-GB": "Discount Example"
+        },
+        "manufacturerLink": {
+            "de-DE": "hhttps://github.com/dneustadt",
+            "en-GB": "https://github.com/dneustadt"
+        },
+        "supportLink": {
+            "de-DE": "https://github.com/dneustadt",
+            "en-GB": "https://github.com/dneustadt"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Dne\\DiscountExample\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Dne\\DiscountExample\\Test\\": "tests/"
+        }
+    },
+    "suggest": {
+        "shopware/storefront": "Require '6.4'.",
+        "shopware/administration": "Require '6.4'. Allows you to to set up the plugin easily"
+    },
+    "conflict": {
+        "shopware/storefront": "<6,>=7",
+        "shopware/administration": "<6,>=7"
+    }
+}
